@@ -1,24 +1,26 @@
-# 📚 Paper Reading Notes
+# 📚 Paper Reading
+记录研究生阶段阅读过的论文。
 
-记录研究生阶段阅读过的论文，以及一些简单的阅读笔记。
+## Papers
 
-## NLP
+### 1. Efficient Estimation of Word Representations in Vector Space
+[arXiv](https://arxiv.org/abs/1301.3781)
+- Topic: Word2Vec
+- Status: 📌 Todo
 
-| Paper | Year | Topic | Status | Notes |
-|---|---:|---|---|---|
-| [Efficient Estimation of Word Representations in Vector Space](https://arxiv.org/abs/1301.3781) | 2013 | Word2Vec | ✅ Read | |
-| [Sequence to Sequence Learning with Neural Networks](https://arxiv.org/abs/1409.3215) | 2014 | Seq2Seq | ⏳ Todo | |
-| [Attention Is All You Need](https://arxiv.org/abs/1706.03762) | 2017 | Transformer | ⏳ Reading | |
-| [BERT](https://arxiv.org/abs/1810.04805) | 2018 | Pre-training | ⏳ Todo | |
 
-## LLM
+### 2. Sequence to Sequence Learning with Neural Networks
+[arXiv](https://arxiv.org/abs/1409.3215)
+- Topic: Seq2Seq
+- Status: 📌 Todo
 
-待补充。
+### 3. Attention Is All You Need
+[arXiv](https://arxiv.org/abs/1706.03762)
+- Topic: Transformer
+- Status: ⏳ Reading
 
-## RAG
 
-待补充。
-
-## Agent
-
-待补充。
+### 4. BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding
+[arXiv](https://arxiv.org/abs/1810.04805)
+- Topic: BERT
+- Status: 📌 Todo
