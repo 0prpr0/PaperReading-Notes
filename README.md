@@ -18,7 +18,7 @@
 [arXiv](https://arxiv.org/abs/1706.03762)
 - Topic: Transformer
 - Status: finished
-- note:
+- note:https://github.com/0prpr0/PaperReading-Notes/blob/main/reviewNotes/attention_is_all_you_need_reviewnotes.md
 
 
 ### 4. BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding
