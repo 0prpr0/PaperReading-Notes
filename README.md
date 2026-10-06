@@ -17,7 +17,8 @@
 ### 3. Attention Is All You Need
 [arXiv](https://arxiv.org/abs/1706.03762)
 - Topic: Transformer
-- Status: ⏳ Reading
+- Status: finished
+- note:https://github.com/0prpr0/PaperReading-Notes/blob/main/attention_is_all_you_need_review_notes.md
 
 
 ### 4. BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding
