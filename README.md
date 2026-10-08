@@ -6,7 +6,7 @@
 ### 1. Efficient Estimation of Word Representations in Vector Space
 [arXiv](https://arxiv.org/abs/1301.3781)
 - Topic: Word2Vec
-- Status: 📌 Todo
+- Status: finished
 
 
 ### 2. Sequence to Sequence Learning with Neural Networks
@@ -18,7 +18,6 @@
 [arXiv](https://arxiv.org/abs/1706.03762)
 - Topic: Transformer
 - Status: finished
-- note:https://github.com/0prpr0/PaperReading-Notes/blob/main/reviewNotes/attention_is_all_you_need_reviewnotes.md
 
 
 ### 4. BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding
