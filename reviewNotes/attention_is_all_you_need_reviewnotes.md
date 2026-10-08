@@ -185,7 +185,7 @@ Decoder 输入：<BOS>  I     love   deep
 原论文在每个子层外使用残差连接，再进行 LayerNorm，即 post-norm：
 
 ```math
-\operatorname{LayerNorm}\bigl(x+\operatorname{Sublayer}(x)\bigr)
+\mathrm{LayerNorm}\bigl(x+\mathrm{Sublayer}(x)\bigr)
 ```
 
 残差连接保留原始信息路径，并帮助深层网络训练。所有子层输出维度均为 $d_{\text{model}}=512$，因此能够直接与输入相加。
@@ -201,8 +201,8 @@ Attention 将一个 Query 和一组 Key–Value 对映射为输出：
 #### 3.2.1 Scaled Dot-Product Attention
 
 ```math
-\operatorname{Attention}(Q,K,V)
-=\operatorname{softmax}\left(\frac{QK^\top}{\sqrt{d_k}}\right)V
+\mathrm{Attention}(Q,K,V)
+=\mathrm{softmax}\left(\frac{QK^\top}{\sqrt{d_k}}\right)V
 ```
 
 若有 $n_q$ 个 Query、$n_k$ 个 Key–Value 对：
@@ -238,7 +238,7 @@ V\in\mathbb{R}^{n_k\times d_v}
 
 ```math
 q\cdot k=\sum_{i=1}^{d_k}q_i k_i,\qquad
-\operatorname{Var}(q\cdot k)=d_k
+\mathrm{Var}(q\cdot k)=d_k
 ```
 
 点积的标准差约为 $\sqrt{d_k}$。维度增大时，点积分数容易变得很大，使 Softmax 过早接近 one-hot，较小概率位置的梯度也随之变小。
@@ -258,15 +258,15 @@ d_k 增大
 #### 3.2.2 Multi-Head Attention
 
 ```math
-\operatorname{MultiHead}(Q,K,V)
-=\operatorname{Concat}(\operatorname{head}_1,\ldots,\operatorname{head}_h)W^O
+\mathrm{MultiHead}(Q,K,V)
+=\mathrm{Concat}(\mathrm{head}_1,\ldots,\mathrm{head}_h)W^O
 ```
 
 其中：
 
 ```math
-\operatorname{head}_i
-=\operatorname{Attention}(QW_i^Q,KW_i^K,VW_i^V)
+\mathrm{head}_i
+=\mathrm{Attention}(QW_i^Q,KW_i^K,VW_i^V)
 ```
 
 Base 模型使用：
@@ -302,8 +302,8 @@ M=
 ```
 
 ```math
-\operatorname{MaskedAttention}(Q,K,V)
-=\operatorname{softmax}\left(\frac{QK^\top}{\sqrt{d_k}}+M\right)V
+\mathrm{MaskedAttention}(Q,K,V)
+=\mathrm{softmax}\left(\frac{QK^\top}{\sqrt{d_k}}+M\right)V
 ```
 
 未来位置加上 $-\infty$ 后，Softmax 权重变为 0。这样训练时即使完整目标句子已经给出，模型也不能偷看未来答案。
@@ -313,7 +313,7 @@ M=
 每个 Encoder/Decoder 层都有一个逐位置 FFN：
 
 ```math
-\operatorname{FFN}(x)=\max(0,xW_1+b_1)W_2+b_2
+\mathrm{FFN}(x)=\max(0,xW_1+b_1)W_2+b_2
 ```
 
 Base 模型的维度变化为：
